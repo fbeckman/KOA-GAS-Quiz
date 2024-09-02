@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    max-width: 100%;
+    padding: 30px;
+}
+
+#quiz, #results {
+    display: none;
+}
+
+#quiz.active, #results.active {
+    display: block;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;  /* Größere Schrift für Fragen */
+    font-weight: bold; /* Fragen fett darstellen */
+}
+
+.choices {
+    margin: 20px 0;
+    font-size: 20px;  /* Größere Schrift für Antworten */
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #e0f4fa; /* Hellblaue Hintergrundfarbe für die Antwortboxen */
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label.correct {
+    background-color: #c8e6c9 !important;  /* Grün bei richtiger Antwort */
+}
+
+label.incorrect {
+    background-color: #ffcdd2 !important;  /* Rot bei falscher Antwort */
+}
+
+label:hover {
+    background-color: #b2ebf2; /* Dunklerer Blau-Ton beim Hover */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.5); /* Größerer Radio-Button */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px; /* Größere Schrift für Buttons */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#score {
+    font-size: 22px;
+    margin: 20px 0;
+}
