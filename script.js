@@ -26,12 +26,6 @@ const quizData = [
         correct: 1
     },
     {
-        question: "Welche Gefahr besteht für das Trinkwasser der Gemeinde Reichling durch die geplanten Gasbohrungen?",
-        choices: ["Keine Gefahr, da die Bohrungen weit entfernt stattfinden", "Es könnten zusätzliche Wasserreserven gefunden werden", 
-        "Das Trinkwasser könnte durch die Nähe der Bohrungen kontaminiert werden", "Es besteht keine Verbindung zwischen den Bohrungen und dem Trinkwasser"],
-        correct: 2
-    },
-    {
         question: "Wie tief soll in Kinsau 1A gebohrt werden?",
         choices: ["30m", "300m", "500m", "3000m"],
         correct: 3
