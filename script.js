@@ -118,7 +118,7 @@ nextButton.addEventListener('click', () => {
         } else {
             alert("Die Antwort ist leider falsch. Die richtige Antwort ist: " + quizData[currentQuiz].description);
         }
-        curentQuiz++;
+        currentQuiz++;
         if (currentQuiz < quizData.length) {
             loadQuiz();
         } else {
