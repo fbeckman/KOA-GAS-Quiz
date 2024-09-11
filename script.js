@@ -111,12 +111,13 @@ previousButton.addEventListener('click', () => {
 
 nextButton.addEventListener('click', () => {
     const answer = getSelected();
+    const currentQuizData = quizData[currentQuiz];
     if (answer !== undefined) {
-        if (answer == quizData[currentQuiz].correct) {
+        if (answer == currentQuizData.correct) {
             score++;
-            alert("Richtig: " + quizData[currentQuiz].description);
+            alert("Richtig: " + currentQuizData.description);
         } else {
-            alert("Die Antwort ist leider falsch. Die richtige Antwort ist: " + quizData[currentQuiz].description);
+            alert("Die Antwort ist leider falsch. Die richtige Antwort ist: " + currentQuizData.choices[currentQuizData.correct] + " " + currentQuizData.description);
         }
         currentQuiz++;
         if (currentQuiz < quizData.length) {
