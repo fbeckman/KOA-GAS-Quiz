@@ -2,56 +2,66 @@ const quizData = [
     {
         question: "Wann will Bayern klimaneutral werden?",
         choices: ["2030", "2035", "2040", "2301"],
-        correct: 2
+        correct: 2,
+        description: "Das ist wenig ambitioniert."
     },
     {
         question: "Was unternimmt Wirtschaftsminister Aiwanger für die Energieversorgung Bayerns in der Zukunft?",
         choices: ["Er genehmigt neue Gasbohrungen, z.B. in Reichling", "Er schafft die 10H-Regel ab", "Er lässt nach Wasserstoff bohren", "Er forciert den Netzausbau und den Ausstieg aus fossiler Energie"],
-        correct: 0
+        correct: 0,
+        description: "1"
     },
     {
         question: "Wie kann Erdgas zum Klimaschutz beitragen?",
         choices: ["Mit viel Greenwashing", "Nur, indem es im Boden bleibt", "Als Kältemittel in Klimaanlagen", "Das kann bestimmt Minister Aiwanger erklären"],
-        correct: 1
+        correct: 1,
+        description: "2"
     },
     {
         question: "Wieviel Prozent des bayrischen Gasverbrauchs könnte Kinsau 1A decken?",
         choices: ["2,5 - 4,2%", "10 - 15%", "20 - 30%", "70 - 80%"],
-        correct: 0
+        correct: 0,
+        description: "3"
     },
     {
         question: "Warum ist der Standort der geplanten Bohrstelle Kinsau 1A besonders problematisch?",
         choices: ["Weil er weit von der Infrastruktur entfernt ist", "Weil er in der Nähe von empfindlichen Trinkwasserschutz- und Naturschutzgebieten liegt", 
         "Weil er in einem städtischen Gebiet liegt", "Weil dort keine Gasvorkommen erwartet werden"],
-        correct: 1
+        correct: 1,
+        description: "4"
     },
     {
         question: "Wie tief soll in Kinsau 1A gebohrt werden?",
         choices: ["30m", "300m", "500m", "3000m"],
-        correct: 3
+        correct: 3,
+        description: "5"
     },
     {
         question: "Welche langfristigen Auswirkungen könnten die Bohrungen auf die lokale Umwelt haben?",
         choices: ["Neue Arbeitsplätze", "Mögliche Bodensenkungen, Lärm und Verschmutzung",
          "Gewerbesteuer-Mehreinnahmen", "Es könnte Gold gefunden werden"],
-        correct: 1
+        correct: 1,
+        description: "6"
     },
     {
         question: "Was plant das Unternehmen Genexco mit dem geförderten Gas?",
         choices: ["Den Bau einer neuen Gaspipeline, um das Gas abtransportieren zu können", "Die kostenlose Nutzung des Gases für lokale Haushalte", 
         "Die Umwandlung des Gases in erneuerbare Energie", "Die Erzeugung von Wasserstoff für Minister Aiwangers Privat PKW"],
-        correct: 0
+        correct: 0,
+        description: "7"
     },
     {
         question: "Welche Rolle spielt der Ukraine-Krieg in den Plänen zur Gasförderung in Reichling?",
         choices: ["Keine Rolle, die Pläne bestehen schon seit Jahrzehnten", "Er dient als Vorwand, um fossile Brennstoffe in Europa zu fördern, obwohl dies die Klimakrise verschärft",
          "Der Krieg hat die Lieferketten für Solarmodule unterbrochen", "Angesichts des Krieges ist  die Klimakrise egal"],
-        correct: 1
+        correct: 1,
+        description: "8"
     },
     {
         question: "Wie viele Windräder sind in Bayern von Januar bis Juni 2024 ans Netz gegangen?",
         choices: ["4", "10", "21", "52"],
-        correct: 0
+        correct: 0,
+        description: "9"
     }
 ];
 
@@ -105,10 +115,11 @@ nextButton.addEventListener('click', () => {
     if (answer !== undefined) {
         if (answer == quizData[currentQuiz].correct) {
             score++;
-            currentQuiz++;
         } else {
-            alert("Die Antwort ist leider falsch. Versuch es nochmal!")
+            alert("Die Antwort ist leider falsch.");
         }
+        alert(quizData[currentQuiz].description);
+        curentQuiz++;
         if (currentQuiz < quizData.length) {
             loadQuiz();
         } else {
